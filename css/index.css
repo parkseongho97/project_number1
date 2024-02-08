@@ -543,12 +543,12 @@ img {
   overflow: hidden;
 }
 #section .cgv .m1 {
-  background: url(../img/movie01.jpg) no-repeat right/cover;
+  background: url(../img/movie01.jpg) no-repeat center/cover;
   filter: brightness(0.6);
   background-attachment: fixed;
 }
 #section .cgv .m2 {
-  background: url(../img/movie02.jpg) no-repeat right/cover;
+  background: url(../img/movie02.jpg) no-repeat center/cover;
   filter: brightness(0.6);
   background-attachment: fixed;
 }
@@ -990,8 +990,9 @@ img {
 
 #section .enjoy .ej li span {
   font-size: 50px;
-  color: #af0b00;
-  border-bottom: 3px solid rgba(175, 11, 0, 0.4);
+  color: rgba(131, 6, 50, 0.8);
+
+  border-bottom: 3px solid rgba(131, 6, 50, 0.8);
 }
 
 #section .enjoy .ej li .enjoyIcBox {
@@ -1076,6 +1077,7 @@ img {
   line-height: 100px;
   font-size: 25px;
 }
+
 /* 푸터영역 */
 #footer {
   height: auto;

@@ -220,7 +220,7 @@
     text-align: center;
   }
   #section .textarea a {
-    color: #ed3124;
+    color: rgba(237, 36, 108, 1);
     font-size: 20px;
     text-align: center;
     display: block;
@@ -358,17 +358,17 @@
     height: auto;
   }
   #section .cgv .m1 {
-    background: url(../img/movie01.jpg) no-repeat right/cover;
+    background: url(../img/movie01.jpg) no-repeat center/cover;
     filter: brightness(0.6);
     background-attachment: fixed;
   }
   #section .cgv .m2 {
-    background: url(../img/movie02.jpg) no-repeat right/cover;
+    background: url(../img/movie02.jpg) no-repeat center/cover;
     filter: brightness(0.6);
     background-attachment: fixed;
   }
   #section .cgv .m3 {
-    background: url(../img/movie03.jpg) no-repeat right/cover;
+    background: url(../img/movie03.jpg) no-repeat center/cover;
     filter: brightness(0.6);
     background-attachment: fixed;
   }
@@ -731,7 +731,8 @@
     text-align: center;
   }
   #section .textarea a {
-    color: #ed3124;
+    color: rgba(237, 36, 108, 1);
+
     font-size: 15px;
     text-align: center;
     display: block;
@@ -818,17 +819,17 @@
     height: auto;
   }
   #section .cgv .m1 {
-    background: url(../img/movie01.jpg) no-repeat right/cover;
+    background: url(../img/movie01.jpg) no-repeat center/cover;
     filter: brightness(0.6);
     background-attachment: fixed;
   }
   #section .cgv .m2 {
-    background: url(../img/movie02.jpg) no-repeat right/cover;
+    background: url(../img/movie02.jpg) no-repeat center/cover;
     filter: brightness(0.6);
     background-attachment: fixed;
   }
   #section .cgv .m3 {
-    background: url(../img/movie03.jpg) no-repeat right/cover;
+    background: url(../img/movie03.jpg) no-repeat center/cover;
     filter: brightness(0.6);
     background-attachment: fixed;
   }
