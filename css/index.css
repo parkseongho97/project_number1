@@ -1,6 +1,7 @@
 /* index.css */
 @charset "utf-8";
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100;200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -223,6 +224,7 @@ img {
 
 #section .slide .text h2 {
   font-size: 8vh;
+  font-family: "Hahmlet", serif;
 }
 
 #section .slide .text p {
@@ -268,6 +270,27 @@ img {
   text-indent: -99999px;
   background: #fff;
   transition: all 0.2s;
+}
+#section .slideOuter .slideInner button.slick-arrow {
+  position: absolute;
+  top: 40%;
+  color: rgba(255, 0, 0, 0.5);
+  font-size: 50px;
+  font-weight: lighter;
+  background: none;
+  border-radius: 100%;
+  border: none;
+  display: block;
+  padding: 0px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+#section .slideOuter .slideInner button.slick-prev {
+  left: 70px;
+  z-index: 9999;
+}
+#section .slideOuter .slideInner button.slick-next {
+  right: 70px;
 }
 
 #section .slick-current.slick-active .slide .text h2 {
@@ -509,77 +532,77 @@ img {
 }
 
 #section .cgv {
-  display: flex;
-  padding: 40px 0;
+  position: relative;
+  display: block;
 }
 
 #section .cgv .movie {
-  flex: 1 1;
   width: 100%;
+  height: 800px;
   transition: all 0.2s;
   overflow: hidden;
 }
 #section .cgv .m1 {
   background: url(../img/movie01.jpg) no-repeat right/cover;
+  filter: brightness(0.6);
+  background-attachment: fixed;
 }
 #section .cgv .m2 {
   background: url(../img/movie02.jpg) no-repeat right/cover;
+  filter: brightness(0.6);
+  background-attachment: fixed;
 }
 #section .cgv .m3 {
   background: url(../img/movie03.jpg) no-repeat right/cover;
+  filter: brightness(0.6);
+  background-attachment: fixed;
 }
 
-#section .cgv .m1.on {
-  background: url(../img/movie_sub01.jpg) no-repeat center/cover;
-}
-#section .cgv .m2.on {
-  background: url(../img/movie_sub02.jpg) no-repeat center/cover;
-}
-#section .cgv .m3.on {
-  background: url(../img/movie_sub03.jpg) no-repeat center/cover;
-}
 #section .cgv .movieText {
-  flex: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
   text-align: center;
+  padding: 30px;
+  border: 2px solid #fff;
+  height: auto;
 }
 #section .cgv .movieText h3 {
   font-size: 60px;
-  color: #242424;
+  color: #ffffff;
   padding-top: 20px;
   font-weight: normal;
+  font-family: "Hahmlet", serif;
 }
 
 #section .cgv .movieText p.text {
   font-size: 17px;
   line-height: 35px;
   padding: 35px;
-  color: #333;
+  color: #ffffff;
   word-break: keep-all;
 }
 #section .cgv .movieText p.mo1 {
-  width: 150px;
   margin: 0 auto;
-  font-size: 25px;
-  color: rgba(30, 149, 0, 1);
-  border: 1px solid rgba(30, 149, 0, 1);
+  font-size: 20px;
+  color: rgb(255, 255, 255);
 }
 #section .cgv .movieText p.mo2 {
   width: 150px;
   margin: 0 auto;
-  font-size: 25px;
-  color: #3693ff;
-  border: 1px solid #3693ff;
+  font-size: 20px;
+  color: #ffffff;
 }
 #section .cgv .movieText p.mo3 {
   width: 150px;
   margin: 0 auto;
-  font-size: 25px;
-  color: rgba(30, 149, 0, 1);
-  border: 1px solid rgba(30, 149, 0, 1);
+  font-size: 20px;
+  color: rgb(255, 255, 255);
 }
 #section .cgv .movieText a {
-  color: #ed3124;
-  border: 1px solid #ed3124;
+  color: #ffffff;
+  border: 1px solid #fff;
   padding: 10px 40px;
   transition: all 0.2s;
   border-radius: 3px;
@@ -602,6 +625,7 @@ img {
 }
 #section .slideOuter2 .slideInner2 {
   position: relative;
+  font-size: 0;
 }
 #section .slideOuter2 .slideInner2 .slide2 {
   position: relative;
@@ -907,7 +931,12 @@ img {
   text-align: center;
   align-items: center;
   color: #333;
-  background: #ed3124;
+  background: rgb(237, 49, 36);
+  background: linear-gradient(
+    126deg,
+    rgba(237, 49, 36, 1) 0%,
+    rgba(237, 36, 108, 1) 100%
+  );
   padding: 50px 0;
 }
 #section .enjoyText {
@@ -955,7 +984,7 @@ img {
 }
 #section .enjoy .ej li a:hover {
   background: #fff;
-  color: #ed3124;
+  color: rgba(237, 36, 108, 1);
   font-weight: bold;
 }
 
@@ -974,13 +1003,17 @@ img {
 
 #section .infolist {
   height: auto;
-  background: #b6241a;
 }
 #section .infolist .listUp {
   display: flex;
   height: auto;
   justify-content: center;
-  background: #b6241a;
+  background: rgb(237, 49, 36);
+  background: linear-gradient(
+    126deg,
+    rgba(237, 49, 36, 1) 0%,
+    rgba(237, 36, 108, 1) 100%
+  );
 }
 #section .infolist ul {
   display: flex;
@@ -1002,10 +1035,10 @@ img {
   background: #fff;
 }
 #section .infolist ul li.on i {
-  color: #b6241a;
+  color: #ed3124;
 }
 #section .infolist ul li.on h3 {
-  color: #b6241a;
+  color: #ed3124;
 }
 #section .infolist ul li h3 {
   word-break: keep-all;
@@ -1046,8 +1079,8 @@ img {
 /* 푸터영역 */
 #footer {
   height: auto;
-  padding: 50px;
-  background: #6e211c;
+  padding: 30px;
+  background: #383838;
 }
 #footer .row {
   margin: 0 auto;

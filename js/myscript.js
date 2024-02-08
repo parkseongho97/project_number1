@@ -30,7 +30,11 @@ $(window).on("resize", function () {
 $(".slideInner").slick({
   autoplay: 4000,
   dots: true,
-  arrows: false,
+  arrows: true,
+  prevArrow:
+    '<button class="slick-prev slick-arrow" aria-label="previous" type="button"><i class="fa-solid fa-angles-left"></i></button>',
+  nextArrow:
+    '<button class="slick-next slick-arrow" aria-label="Next" type="button"><i class="fa-solid fa-angles-right"></i></button>',
 });
 
 $(".slideOuter .plapau i").on("click", function () {
@@ -187,7 +191,7 @@ $(".nav .depth1 > li").on("click", function () {
 
 // 햄버거 버튼
 $("#header .menuopen").on("click", function () {
-  $(this).next().stop().slideToggle(250);
+  $(this).next().stop().slideToggle(200);
   if (!$(this).find("i").hasClass("fa-bars")) {
     $("#header .nav .depth2").slideUp();
     $("#header .nav .depth1 > li").removeClass("on");
@@ -198,5 +202,5 @@ $("#header .menuopen").on("click", function () {
 });
 
 $("#section .infolist ul > li").on("mouseover mouseout", function () {
-  $(this).toggleClass("on");
+  $(this).toggleClass("on", 200);
 });
