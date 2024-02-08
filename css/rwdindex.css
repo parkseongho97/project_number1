@@ -11,13 +11,18 @@
 @media screen and (max-width: 910px) {
   /* 헤더영역 */
   #header {
-    background: #fff;
+    background: rgb(237, 49, 36);
+    background: linear-gradient(
+      126deg,
+      rgba(237, 49, 36, 1) 0%,
+      rgba(237, 36, 108, 1) 100%
+    );
     /* background: #000; */
     position: static;
     width: 100%;
     /* height: auto; */
     /* z-index: 999; */
-    padding: 0 10px;
+    padding: 0 0px;
   }
   #header .row {
     display: flex;
@@ -36,16 +41,20 @@
     align-items: center;
     color: #000;
     margin: 30px 0px 10px;
+    padding-right: 10px;
   }
   #header .menuopen i {
-    color: #ed3124;
+    color: #fff;
+  }
+  #header h1 {
+    padding-left: 10px;
   }
   #header h1 a {
     width: 125px;
     height: 63px;
     display: block;
     background-size: contain;
-    background: url(../img/logo_hover.png) no-repeat;
+    background: url(../img/logo.png) no-repeat;
   }
 
   #header .nav {
@@ -54,11 +63,11 @@
   }
   #header .nav .depth1 {
     display: block;
-    background: transparent;
+    background: #fff;
   }
   #header .nav .depth1 > li {
     display: block;
-    padding: 15px 0;
+    padding: 10px 0;
     align-items: center;
     margin: 0 auto;
     font-size: 18px;
@@ -76,14 +85,13 @@
     align-items: center;
     display: block;
     color: #333;
-    border-bottom: 1px solid #fff;
   }
   #header .nav .depth1 > li.on {
     color: #fff;
     border-bottom: 3px solid transparent;
   }
   #header .nav .depth1 > li.on > a {
-    color: #ed3124;
+    color: rgba(237, 36, 108, 1);
   }
   /* #header .nav .depth1 > li a:hover .depth2 {
     display: block;
@@ -97,7 +105,7 @@
     font-weight: normal;
     font-size: 17px;
     text-align: center;
-    background: transparent;
+    /* background: #fff; */
   }
 
   #header .nav .depth2 > li > a {
@@ -107,7 +115,7 @@
     color: #333;
   }
   #header .nav .depth2 > li > a:hover {
-    background: #ed3124;
+    background: rgb(237, 36, 86) 100%;
     color: #fff;
   }
   #header .info {
@@ -151,7 +159,13 @@
   }
   #section .slide .text a:hover {
     font-size: 18px;
-    border: 1px solid #ed3124;
+    border: 1px solid rgba(237, 36, 108, 1);
+    background: rgb(237, 49, 36);
+    background: linear-gradient(
+      126deg,
+      rgba(237, 49, 36, 1) 0%,
+      rgba(237, 36, 108, 1) 100%
+    );
     padding: 10px 30px;
     transform: translate3d(0, 100%, 0);
     margin: 0px 10px 20px;
@@ -222,17 +236,17 @@
   }
 
   #section .row .box {
-    background: rgba(130, 0, 0, 0.6);
+    background: rgba(237, 36, 108, 0.7);
     position: absolute;
     z-index: 999;
-    width: 80px;
-    height: 100px;
+    width: 60px;
+    height: 80px;
     transition: all 0.3s;
   }
   #section .row .box h3 {
     color: #fff;
     text-align: center;
-    line-height: 60px;
+    line-height: 40px;
     font-size: 50px;
   }
 
@@ -277,8 +291,8 @@
   }
 
   #section .textbox a {
-    color: #ed3124;
-    border: 1px solid;
+    color: rgba(237, 36, 108, 1);
+    border: 1px solid rgba(237, 36, 108, 1);
     display: inline-block;
     font-size: 20px;
     margin-top: 15px;
@@ -287,13 +301,17 @@
     transition: all 0.3s;
   }
   #section .textbox a:hover {
-    background: #ed3124;
+    border: 1px solid rgba(237, 36, 108, 1);
+    background: rgb(237, 49, 36);
+    background: linear-gradient(
+      126deg,
+      rgba(237, 49, 36, 1) 0%,
+      rgba(237, 36, 108, 1) 100%
+    );
     color: white;
-    transition: all 0.3s;
     border-radius: 3px;
-    transition: all 0.3s;
 
-    font-weight: normal;
+    font-weight: 500;
   }
 
   /* cgv픽 */
@@ -347,19 +365,23 @@
     color: #333;
     word-break: keep-all;
   }
-  #section .cgv .movieText a {
-    color: #ed3124;
-    border: 1px solid #ed3124;
+  #section .cgv .movieText a:hover {
+    color: #ffffff;
+    border: 1px solid rgba(237, 36, 108, 1);
     padding: 10px 40px;
-    transition: all 0.2s;
+    background: rgb(237, 49, 36);
+    background: linear-gradient(
+      126deg,
+      rgba(237, 49, 36, 1) 0%,
+      rgba(237, 36, 108, 1) 100%
+    );
     border-radius: 3px;
-    font-size: 20px;
-    display: inline-block;
-    transition: all 0.3s;
+    font-weight: bold;
+    display: 600;
   }
   #section .cgv .movieText a.on {
     color: white;
-    border: 1px solid #ed3124;
+    border: 15px solid #ed3124;
     padding: 10px 80px;
     transition: all 0.2s;
     border-radius: 3px;
@@ -456,6 +478,10 @@
     text-indent: -99999px;
     transition: all 0.2s;
   }
+  #section .slideOuter .slideInner ul.slick-dots li.slick-active button {
+    background: rgba(237, 36, 108, 1);
+    width: 50px;
+  }
   #section .slideOuter2 .slideInner2 ul.slick-dots li.slick-active button {
     background: #ffffff;
     margin-top: 10px;
@@ -518,9 +544,14 @@
   }
 
   /* popup영역 */
+
+  #section .leftpopup .popul1 {
+    margin: 0 10px;
+  }
+
   #section .leftpopup .popul1 .img {
     width: 100%;
-    height: 200px;
+    height: 300px;
   }
   #section .leftpopup .popul1 button.slick-arrow {
     position: absolute;
@@ -580,7 +611,7 @@
 
   #section .photo img {
     width: 90%;
-    height: 150px;
+    height: 250px;
     border-radius: 30px;
   }
 
@@ -720,7 +751,7 @@
   }
 
   #section .row .box {
-    background: rgba(130, 0, 0, 0.6);
+    background: rgba(237, 36, 108, 0.5);
     position: absolute;
     z-index: 999;
     width: 60px;
@@ -796,9 +827,12 @@
     font-size: 20px;
   }
 
+  #section .leftpopup .popul1 {
+    margin: 0 10px;
+  }
   #section .leftpopup .popul1 .img {
     width: 100%;
-    height: 150px;
+    height: 200px;
   }
   #section .leftpopup .popul1 button.slick-arrow {
     position: absolute;

@@ -1,9 +1,31 @@
-let ww = $(window).width();
-if (ww > 910) {
-  $("html").addClass("pc");
-} else {
-  $("html").addClass("mobile");
+function getWindowWidth() {
+  let ww = $(window).width();
+  if (ww > 910) {
+    $("html").addClass("pc").removeClass("mobile");
+    $("#header .nav").css({
+      display: "flex",
+      width: "auto",
+    });
+    $("#header .nav .depth1 > li").removeClass("on");
+    $("#header .nav .depth1 > li").find(".depth2").hide();
+  } else {
+    $("html").addClass("mobile").removeClass("pc");
+    $("#header .menuopen")
+      .find("i")
+      .removeClass("fa-times")
+      .addClass("fa-bars");
+    $("#header .nav").css({
+      display: "none",
+      width: "100%",
+    });
+  }
 }
+
+getWindowWidth();
+
+$(window).on("resize", function () {
+  getWindowWidth();
+});
 
 $(".slideInner").slick({
   autoplay: 4000,
@@ -105,7 +127,7 @@ $("#header .nav .depth1 > li").on("click", function () {
   if ($("html").hasClass("mobile")) {
     $(this).toggleClass("on");
     $(this).siblings().removeClass("on");
-    $(this).find(".depth2").stop().slideToggle(200);
+    $(this).find(".depth2").stop().slideToggle(300);
     $(this).siblings().find(".depth2").slideUp("on");
   }
 });
@@ -165,15 +187,16 @@ $(".nav .depth1 > li").on("click", function () {
 
 // 햄버거 버튼
 $("#header .menuopen").on("click", function () {
-  $(this).next().stop().slideToggle(200);
-  if (!$(this).find("i").hasClass("fa-times")) {
-    $(this).find("i").removeClass("fa-bars").addClass("fa-times");
+  $(this).next().stop().slideToggle(250);
+  if (!$(this).find("i").hasClass("fa-bars")) {
+    $("#header .nav .depth2").slideUp();
+    $("#header .nav .depth1 > li").removeClass("on");
+    $(this).find("i").addClass("fa-bars").removeClass("fa-times");
   } else {
-    $(this).find("i").removeClass("fa-times").addClass("fa-bars");
+    $(this).find("i").addClass("fa-times").removeClass("fa-bars");
   }
 });
 
 $("#section .infolist ul > li").on("mouseover mouseout", function () {
-    $(this).toggleClass("on");
+  $(this).toggleClass("on");
 });
-
