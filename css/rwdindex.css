@@ -54,7 +54,7 @@
     height: 63px;
     display: block;
     background-size: contain;
-    background: url(../img/logo.png) no-repeat;
+    background: url(../img/logo.hd.png) no-repeat;
   }
 
   #header .nav {
@@ -227,26 +227,29 @@
     padding-top: 20px;
   }
   #section .row {
-    display: block;
+    display: flex;
     position: relative;
     width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   #section .row li {
-    width: 50%;
+    position: relative;
     text-align: center;
-    margin: 50px auto;
+    margin: 10px 10px;
+    flex: 1 0 40%;
   }
   #section .row h2 {
     font-size: 45px;
   }
   #section .row h3 {
-    font-size: 45px;
+    font-size: 30px;
     color: #242424;
     padding-top: 20px;
     font-weight: 500;
   }
   #section .row .image .hover h2 {
-    font-size: 35px;
+    font-size: 30px;
     text-align: center;
     font-weight: normal;
   }
@@ -738,7 +741,19 @@
     display: block;
     padding-top: 10px;
   }
-
+  #section .row {
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #section .row li {
+    position: relative;
+    text-align: center;
+    margin: 10px 10px;
+    flex: 0 1 50%;
+  }
   #section .row h3 {
     font-size: 30px;
     color: #242424;
@@ -889,6 +904,51 @@
     font-weight: bold;
     display: inline-block;
   }
+  #section .moviechart .row li:nth-child(1) {
+    transform: translateY(100%);
+    transition: all 0.6s;
+    opacity: 0;
+  }
+  #section .moviechart .row.on li:nth-child(1) {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  #section .moviechart .row li:nth-child(2) {
+    transform: translateY(100%);
+    transition: all 0.6s;
+    opacity: 0;
+  }
+  #section .moviechart .row.on li:nth-child(2) {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  #section .moviechart .row li:nth-child(3) {
+    transform: translateY(100%);
+    transition: all 0.6s;
+    opacity: 0;
+  }
+  #section .moviechart .row.on li:nth-child(3) {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  #section .moviechart .row li:nth-child(4) {
+    transform: translateY(100%);
+    transition: all 0.6s;
+    opacity: 0;
+  }
+  #section .moviechart .row.on li:nth-child(4) {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  #section .moviechart .row li:nth-child(5) {
+    transform: translateY(100%);
+    transition: all 0.6s;
+    opacity: 0;
+  }
+  #section .moviechart .row.on li:nth-child(5) {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 
   #section .eventText h3 {
     font-size: 45px;
@@ -936,6 +996,42 @@
     border: none;
     display: block;
     cursor: pointer;
+  }
+  #section .enjoy .ej li:nth-child(1) {
+    transform: translateY(100%);
+    transition: all 0.6s;
+    opacity: 0;
+  }
+  #section .enjoy .ej.on li:nth-child(1) {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  #section .enjoy .ej li:nth-child(2) {
+    transform: translateY(100%);
+    transition: all 0.6s;
+    opacity: 0;
+  }
+  #section .enjoy .ej.on li:nth-child(2) {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  #section .enjoy .ej li:nth-child(3) {
+    transform: translateY(100%);
+    transition: all 0.6s;
+    opacity: 0;
+  }
+  #section .enjoy .ej.on li:nth-child(3) {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  #section .enjoy .ej li:nth-child(4) {
+    transform: translateY(100%);
+    transition: all 0.6s;
+    opacity: 0;
+  }
+  #section .enjoy .ej.on li:nth-child(4) {
+    transform: translateY(0%);
+    opacity: 1;
   }
 
   #section .photo img {

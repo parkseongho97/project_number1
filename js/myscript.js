@@ -116,6 +116,11 @@ $("#header .nav .depth1 > li").on("mouseover mouseout", function () {
     $(this).toggleClass("on");
     $(this).find(".depth2").stop().slideToggle(200);
   }
+  if ($(sct >= 1100)) {
+    $(this).css({
+      color: "blue",
+    });
+  }
 });
 $("#section .row .agebox").on("mouseover mouseout", function () {
   $(this).toggleClass("on");
@@ -203,4 +208,76 @@ $("#header .menuopen").on("click", function () {
 
 $("#section .infolist ul > li").on("mouseover mouseout", function () {
   $(this).toggleClass("on", 200);
+});
+
+$("#floating").on("click", function () {
+  $("html").animate(
+    {
+      scrollTop: "0",
+    },
+    500
+  );
+  return false;
+});
+
+let header = $("#header").offset().top + $("#header").outerHeight() / 5;
+
+let movieChart =
+  $("#section .moviechart .row").offset().top +
+  $("#section .moviechart .row").outerHeight() / 5;
+console.log(movieChart);
+
+let enjoy =
+  $("#section .enjoyList .ej").offset().top +
+  $("#section .enjoyList .ej").outerHeight() / 5;
+
+let popup =
+  $("#section .leftpopup .popul1").offset().top +
+  $("#section .leftpopup .popul1").outerHeight() / 5;
+
+let boxlist =
+  $("#section .boxlist .boxul").offset().top +
+  $("#section .boxlist .boxul").outerHeight() / 5;
+
+$(window).on("scroll", function () {
+  let sct = $(this).scrollTop();
+  console.log(sct);
+  if (sct + $(this).height() >= movieChart) {
+    $("#section .moviechart .row").addClass("on");
+  } else {
+    $("#section .moviechart .row").removeClass("on");
+  }
+  if (sct + $(this).height() >= enjoy) {
+    $("#section .enjoyList .ej").addClass("on");
+  } else {
+    $("#section .enjoyList .ej").removeClass("on");
+  }
+  if (sct + $(this).height() >= popup) {
+    $("#section .leftpopup .popul1").addClass("on");
+  } else {
+    $("#section .leftpopup .popul1").removeClass("on");
+  }
+  if (sct + $(this).height() >= boxlist) {
+    $("#section .boxlist .boxul").addClass("on");
+  } else {
+    $("#section .boxlist .boxul").removeClass("on");
+  }
+  if (sct >= 1000) {
+    $("#floating").fadeIn(200);
+  } else {
+    $("#floating").fadeOut(200);
+  }
+  if (sct >= 1100) {
+    $("#header").addClass("hd");
+    $("#header h1 a").addClass("hd");
+    $("#header .info a").addClass("hd");
+    $("#header .nav .depth1 > li > a").addClass("hd");
+    $("#header .info p").addClass("hd");
+  } else {
+    $("#header").removeClass("hd");
+    $("#header h1 a").removeClass("hd");
+    $("#header .info a").removeClass("hd");
+    $("#header .nav .depth1 > li > a").removeClass("hd");
+    $("#header .info p").removeClass("hd");
+  }
 });
